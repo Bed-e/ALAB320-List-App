@@ -1,11 +1,17 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-function ToDoList({ todos, onRemoveTodo, onToggleDone }) {
+function ToDoList({
+  todos,
+  onRemoveTodo,
+  onToggleDone,
+  onToggleEdit,
+  onUpdateTodoName,
+}) {
   return (
     <div className="list">
       <ul>
-        {console.log([...todos])}
+        {/*console.log([...todos])*/}
         {todos.map((todo) => (
           <ListItem
             todo={todo}
@@ -13,6 +19,8 @@ function ToDoList({ todos, onRemoveTodo, onToggleDone }) {
             id={todo.id}
             onRemoveTodo={onRemoveTodo}
             onToggleDone={onToggleDone}
+            onToggleEdit={onToggleEdit}
+            onUpdateTodoName={onUpdateTodoName}
           />
         ))}
       </ul>

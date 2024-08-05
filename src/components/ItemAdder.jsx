@@ -17,6 +17,7 @@ function ItemAdder({ onAddTodo }) {
       done: false,
       id: Date.now(),
       key: Date.now(),
+      editing: false,
     };
     //console.log(newTodo);
     e.name = "";
@@ -26,6 +27,7 @@ function ItemAdder({ onAddTodo }) {
   return (
     <div>
       <input
+        value={todoName}
         type="text-input"
         onChange={handleChange}
         name=""
