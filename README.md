@@ -8,7 +8,7 @@ This is a simple todo list application built using React and Vite. The applicati
 - List of Todo Items: Each todo item includes:
   - A checkbox to indicate whether the task is complete.
   - A "delete" button to remove the task from the list (disabled unless the task is complete).
-    -An "edit" button to enable editing the task description.
+  - An "edit" button to enable editing the task description.
 - Edit Mode: When editing a task:
   - The task description is replaced with a text input.
   - The "delete" and "edit" buttons are hidden.

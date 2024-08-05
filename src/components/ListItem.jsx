@@ -1,5 +1,14 @@
 import React from "react";
-import { useState } from "react";
+import { useReducer } from "react";
+
+function todoNameReducer(state, action) {
+  switch (action.type) {
+    case "SET_TODO_NAME":
+      return action.payload;
+    default:
+      throw new Error(`Unknown action type: ${action.type}`);
+  }
+}
 
 function ListItem({
   todo,
@@ -8,7 +17,7 @@ function ListItem({
   onToggleEdit,
   onUpdateTodoName,
 }) {
-  const [todoName, setTodoName] = useState(todo.todoName);
+  const [todoName, dispatch] = useReducer(todoNameReducer, todo.todoName);
 
   const todoNameStyle = {
     textDecoration: todo.done ? "line-through" : "none",
@@ -29,7 +38,7 @@ function ListItem({
     onToggleEdit(todo.id);
   }
   function handleChange(e) {
-    setTodoName(e.target.value);
+    dispatch({ type: "SET_TODO_NAME", payload: e.target.value });
   }
 
   return (
