@@ -55,7 +55,7 @@ The application should include an input element that allows users to create new 
 git clone https://github.com/your-username/todo-list-app.git
 ```
 
-2.Navigate to the project directory:
+2. Navigate to the project directory:
 
 ```shell
 cd todo-list-app
