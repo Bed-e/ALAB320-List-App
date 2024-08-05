@@ -4,8 +4,9 @@ import ToDoList from "./components/ToDoList";
 import { useState } from "react";
 
 const defaultTodos = [
-  { todoName: "ricky", done: false, id: 1, key: 1, editing: false },
-  { todoName: "sticky", done: true, id: 2, key: 2, editing: false },
+  { todoName: "Complete my ALab", done: true, id: 1, key: 1, editing: false },
+  { todoName: "complete my SBA", done: false, id: 2, key: 2, editing: false },
+  { todoName: "be amazing", done: false, id: 3, key: 3, editing: false },
 ];
 
 function App() {

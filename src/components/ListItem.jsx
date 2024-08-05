@@ -42,7 +42,9 @@ function ListItem({
         onChange={handleChange}
         style={todo.editing ? {} : { display: "none" }}
       />
-      <button onClick={handleToggleEdit}>edit</button>
+      <button onClick={handleToggleEdit}>
+        {todo.editing ? "save" : "edit"}
+      </button>
       <button
         disabled={!todo.done}
         onClick={handleDeleteTodo}
