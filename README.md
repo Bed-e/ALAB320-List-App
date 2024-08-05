@@ -39,6 +39,10 @@ When editing a task:
 
 The application should include an input element that allows users to create new todo items and add them to the list.
 
+#### UseReducer
+
+useReducer is used in the ListItem component. It replaced the need for useState in the component, and it handles the state of the todoName variable
+
 # Setup
 
 ### Make sure you have the following installed:
